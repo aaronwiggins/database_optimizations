@@ -23,6 +23,24 @@ After completing this assignment, you should...
 * **A test suite.** Build your application using TDD.  Your test suite must include unit tests, controller tests, and at least two integration tests.
 * **A reflection on your estimate.**
 
+--------------------
+
+Initial:
+* seed: 3000 seconds
+* index: 180 seconds
+
+With Indicies:
+* migrate: 1 second
+* seed: 2500 seconds
+* index: 4.6 seconds
+
+Creating the indices migration then running db:migrate followed by db:seed is faster than running db:seed (w/out indices) then doing a migration for indices.
+
+db size: 571,760,640 bytes
+dev log: 1,473,626,565 bytes
+
+--------------------
+
 ## Normal Mode
 
 For this project, you will be starting with an application which runs very slowly.  This ineffiency is due partly to the sheer amount of data present, but mostly due to the structure of the code and the database.  Your task is to make it run in a reasonable amount of time.
