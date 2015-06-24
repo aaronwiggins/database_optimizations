@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   get 'reports/all_data'
   get 'reports/welcome_page'
   # post 'reports/welcome_page'
-  get 'reports/thank_you'
   post 'reports/thank_you'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
