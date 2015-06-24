@@ -1,7 +1,7 @@
 class GetDataJob < ActiveJob::Base
   queue_as :default
 
-  def perform(user_search, user_email)
-    SearchMailer.delayed_job(user_search, user_email).deliver_now
+  def perform(*args)
+    SearchMailer.report(args[0], args[1]).deliver_now
   end
 end

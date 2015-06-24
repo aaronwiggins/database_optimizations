@@ -12,6 +12,6 @@ class SearchMailer < ApplicationMailer
         sequence_id: Sequence.where(
         assembly_id: Assembly.where(
         name: user_search)))).order(percent_similarity: :desc)
-    mail to: user_email
+    mail to: "#{user_email}"
   end
 end
